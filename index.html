@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/choropleth-favicon.png"
+      type="image/png"
+    />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+    <title>Visualize With A Choropleth Map</title>
+  </head>
+  <body>
+    <h1 id="title">EDUCATION STATS IN COUNTIES</h1>
+    <h4 id="description">
+      Percentage of people with a bachelor's degree that are over 25 years of age.
+    </h4>
+    <div id="tooltip"></div>
+    <svg id="canvas"></svg>
+
+    <svg id="legend">
+      <g>
+        <rect x="10" y="0" width="40" height="40" fill="#52b2bf"></rect>
+        <text x="60" y="20" fill="whitesmoke">Less than or equal to 15%</text>
+      </g>
+
+      <g>
+        <rect x="10" y="40" width="40" height="40" fill="#3944bc"></rect>
+        <text x="60" y="60" fill="whitesmoke">Between 15% and 30%</text>
+      </g>
+      <g>
+        <rect x="10" y="80" width="40" height="40" fill="#2832c2"></rect>
+        <text x="60" y="100" fill="whitesmoke">Between 30% and 45%</text>
+      </g>
+      <g>
+        <rect x="10" y="120" width="40" height="40" fill="#051094"></rect>
+        <text x="60" y="140" fill="whitesmoke">45% and above</text>
+      </g>
+    </svg>
+  </body>
+
+  <script defer src="app.js"></script>
+  <script
+    defer
+    src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+  ></script>
+</html>
